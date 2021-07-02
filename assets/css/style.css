@@ -1,0 +1,169 @@
+/*
+author by : chen
+config base*/
+* 
+{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+@font-face 
+{
+	font-family: 'segoeui';
+	src : url('../fonts/SegoeUI.ttf');
+}
+body 
+{
+	font-family: 'segoeui'; 
+	color: #444;
+}
+
+/*config class*/
+.page {
+	height: 100vh;
+	position: relative;
+	/*background-color: #eee;*/
+}
+.section {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.header {
+	width: 100%;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 0;
+	z-index: 999;
+}
+.header .top-bar {
+	padding:10px;
+	font-weight: 600;
+	font-size: 20px;
+}
+.header .navigation {
+	display: block;
+	border-top: 1px solid #eee; 
+	border-bottom: 1px solid #eee; 
+}
+.header .navigation ul li {
+	display: inline-block;
+	list-style: none;
+}
+.header .navigation ul li a {
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+	display: block;
+	text-decoration: none;
+	padding: 10px;
+	text-align: center;
+	/*border: 1px solid #eee;*/
+	transition: all .3s;
+	color: #444;
+}
+.header .navigation ul li a:hover {
+	background-color: #4CAF50;
+	color: #fff;
+}
+
+/*config body class*/
+.body {
+	display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+	margin-top: 88px;
+}
+.body .item-section {
+	display: flex;
+	flex-direction: row;
+}
+.body .item-section .thumb-img {
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+	background-color: #555;
+	position: relative;
+}
+.body .item-section .thumb-img::after {
+	content: 'X';
+	position: absolute;
+	color: #fff;
+	font-size: 50px;
+	left: 30%;
+	top: 0%;
+}
+.body .item-section .thumb-desc {
+	max-height: 85px;
+}
+.body .item-section .thumb-desc {
+	-ms-flex: 0 0 80%;
+    flex: 0 0 80%;
+    max-width: 80%;
+	padding: 10px;
+	border-bottom: 1px solid #eee;
+}
+.body .item-section .thumb-desc .section {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.thumb-desc .desc {
+	-ms-flex: 0 0 90%;
+    flex: 0 0 90%;
+    max-width: 90%;
+	font-size: 12px;
+}
+.thumb-desc .notif {
+	-ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%;
+    /*background-color: #eee;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.thumb-desc .desc .title {
+	font-size: 14px;
+	font-weight: 600;
+}
+.thumb-desc .desc .timeUpdate {
+	font-size: 12px;
+}
+.thumb-desc .desc .auth {
+	font-size: 11px;
+	margin-bottom: 5px;
+}
+
+.menu-fixed {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+.menu-fixed .menu-section {
+	display: flex;
+	flex-direction: row;
+}
+.menu-fixed .item {
+	-ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.menu-fixed .b-section {
+	border-top: 1px solid #ccc; 
+	padding: 20px 10px;
+	text-align: center;
+	background-color: #eee;
+}
+.menu-fixed .b-section a {
+	text-decoration: none;
+	color: #777;
+}
+
+/*config media query*/
+@media screen and (max-width: 720px) {
+
+}
